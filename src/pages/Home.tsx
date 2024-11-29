@@ -3,6 +3,7 @@ import { allExercises } from '../data/exercises';
 import Pagination from '../components/Pagination';
 import { FaReact } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss, SiVite, SiReactrouter } from 'react-icons/si';
+import AdBanner from '../components/AdBanner';
 
 // Lazy load the ExerciseCard component
 const ExerciseCard = lazy(() => import('../components/ExerciseCard'));
@@ -97,6 +98,9 @@ const Home = () => {
           ))}
         </Suspense>
       </div>
+
+      {/* Ad Banner */}
+      <AdBanner />
 
       {/* Show message if no results */}
       {filteredExercises.length === 0 && (
